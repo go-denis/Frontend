@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Men's Hooded Sweatshirt",
+    "description": "A comfortable and stylish hooded sweatshirt for men, perfect for everyday wear.",
+    "price": 39.99,
+    "image": "img/prod_06.svg"
+  },
+  {
+    "id": 2,
+    "name": "Women's High-Waisted Jeans",
+    "description": "Trendy high-waisted jeans for women, designed for a flattering fit and all-day comfort.",
+    "price": 49.99,
+    "image": "img/prod_05.svg"
+  },
+  {
+    "id": 3,
+    "name": "Men's Leather Jacket",
+    "description": "A classic leather jacket for men, crafted from high-quality leather and featuring a stylish design.",
+    "price": 199.99,
+    "image": "img/prod_04.svg"
+  },
+  {
+    "id": 4,
+    "name": "Women's Knee-Length Dress",
+    "description": "A versatile knee-length dress for women, suitable for both casual and formal occasions.",
+    "price": 79.99,
+    "image": "img/prod_03.svg"
+  },
+  {
+    "id": 5,
+    "name": "Men's Slim Fit Chinos",
+    "description": "Tailored slim fit chinos for men, made from comfortable stretch cotton fabric.",
+    "price": 59.99,
+    "image": "img/prod_02.svg"
+  },
+  {
+    "id": 6,
+    "name": "Women's Ankle Boots",
+    "description": "Stylish ankle boots for women, featuring a low heel and durable construction.",
+    "price": 89.99,
+    "image": "img/prod_01.svg"
+  }
+]
