@@ -1,6 +1,11 @@
 // Получение данных о пользователе
 function getUserData(userID) {
-    return fetch(`https://example.com/users/${userID}`)
+    return fetch(`https://example.com/users/${userID}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
         .then(response => {
             if (!response.ok) {
                 throw new Error('User not found');
