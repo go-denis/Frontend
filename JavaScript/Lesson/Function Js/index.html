@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Test</h1>
+<script>
+    merge();
+    function merge(param1, param2) {
+        const arr1 = [1, 2, 3];
+        const arr2 = [...arr1, 4, 5, 6];
+        console.log(arr2);
+    }
+
+    function sum(...args) {
+        return args.reduce((acc, val) => acc + val, 0);
+    }
+
+    console.log(sum(1, 2, 3, 4)); // 10
+
+    function multiply(multiplier, ...nums) {
+        return nums.map(num => num * multiplier);
+    }
+
+    console.log(multiply(2, 1, 2, 3)); // [2, 4, 6]
+
+</script>
+</body>
+</html>
