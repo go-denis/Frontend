@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление отзыва о продукте</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Добавление отзыва о продукте</h1>
+<form id="review-form">
+    <label for="product-name">Название продукта:</label>
+    <input type="text" id="product-name" required>
+    <br><br>
+    <label for="review-text">Отзыв:</label>
+    <textarea id="review-text" rows="4" cols="50" required></textarea>
+    <br><br>
+    <button type="submit">Добавить отзыв</button>
+    <p class="error" style="display: none;">Все поля должны быть заполнены.</p>
+</form>
+<script src="add-review.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы о продуктах</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .error {
+            color: red;
+        }
+        .product {
+            margin-bottom: 20px;
+        }
+        .reviews {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <button id="add-review-btn">Добавить отзыв</button>
+    <button id="view-reviews-btn">Просмотреть отзывы</button>
+</nav>
+
+<section id="add-review-section" class="hidden">
+    <h1>Добавление отзыва о продукте</h1>
+    <form id="review-form">
+        <label for="product-name">Название продукта:</label>
+        <input type="text" id="product-name" required>
+        <br><br>
+        <label for="review-text">Отзыв:</label>
+        <textarea id="review-text" rows="4" cols="50" required></textarea>
+        <br><br>
+        <button type="submit">Добавить отзыв</button>
+        <p class="error" style="display: none;">Все поля должны быть заполнены.</p>
+    </form>
+</section>
+
+<section id="view-reviews-section" class="hidden">
+    <h1>Отзывы о продуктах</h1>
+    <div id="products"></div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
