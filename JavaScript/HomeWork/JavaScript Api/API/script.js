@@ -18,10 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
 newImageButton.addEventListener('click', loadRandomImage);
 likeButton.addEventListener('click', toggleLike);
 
+
 async function fetchRandomImage() {
     const response = await fetch(`https://api.unsplash.com/photos/random?client_id=${accessKey}`);
-    const data = await response.json();
-    return data;
+
+    if (!response.ok) {
+        throw new Error(response.statusText);
+    }
+
+    return await response.json();
 }
 
 async function loadRandomImage() {
