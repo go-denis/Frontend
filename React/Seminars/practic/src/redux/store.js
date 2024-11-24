@@ -1,13 +1,31 @@
-import { createStore, combineReducers } from "redux";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import storage from "redux-persist/lib/storage";
+import { persistStore, persistReducer } from "redux-persist";
 import themeReducer from "./reducer";
-import productsReducer from "./productsSlice"; // Новый редьюсер для продуктов
+import productsReducer from "./productsSlice";
+import tasksReducer from "./tasksSlice"; // Новый редьюсер задач
 
-// Комбинирование редьюсеров
+// Настройка persist
+const persistConfig = {
+    key: "root",
+    storage,
+};
+
 const rootReducer = combineReducers({
     theme: themeReducer,
     products: productsReducer,
+    tasks: tasksReducer, // Добавляем редьюсер задач
 });
 
-const store = createStore(rootReducer);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
+const store = configureStore({
+    reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: false,
+        }),
+});
+
+export const persistor = persistStore(store);
 export default store;
