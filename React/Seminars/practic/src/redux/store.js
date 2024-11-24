@@ -1,6 +1,13 @@
-import { createStore } from "redux";
+import { createStore, combineReducers } from "redux";
 import themeReducer from "./reducer";
+import productsReducer from "./productsSlice"; // Новый редьюсер для продуктов
 
-const store = createStore(themeReducer);
+// Комбинирование редьюсеров
+const rootReducer = combineReducers({
+    theme: themeReducer,
+    products: productsReducer,
+});
+
+const store = createStore(rootReducer);
 
 export default store;
