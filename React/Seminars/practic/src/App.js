@@ -9,7 +9,7 @@ function App() {
         <h1>My React App</h1>
         <Message text="Hello, this is your first message!" />
         <Message text="This is another message!" />
-          <div className="App">
+          <div>
               <h1>Мой список комментариев</h1>
               <CommentsList />
           </div>
