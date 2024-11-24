@@ -1,26 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import Message from "./components/Message";
-import CommentsList from "./components/CommentsList";
-import TemperatureConverter from "./components/TemperatureConverter/TemperatureConverter";
-import TodoList from "./components/TodoList/TodoList";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import AboutPage from "./components/AboutPage";
+import Navigation from "./components/Navigation";
+
 
 function App() {
   return (
-      <div className="App">
-        <h1>My React App</h1>
-        <Message text="Hello, this is your first message!" />
-        <Message text="This is another message!" />
+      <Router>
           <div>
-              <h1>Мой список комментариев</h1>
-              <CommentsList />
+              <Navigation />
+              <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+              </Routes>
           </div>
-
-          <TemperatureConverter />
-
-          <TodoList />
-      </div>
+      </Router>
   );
 }
 
