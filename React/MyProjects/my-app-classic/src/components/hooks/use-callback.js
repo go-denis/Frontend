@@ -10,7 +10,7 @@ useCallback — это хук, который возвращает мемоиз�
 
 const Button = React.memo(({ onClick }) => {
     console.log('Button rendered');
-    return <Button onClick={onClick}>Click me</Button>;
+    return <Button variant="outlined" onClick={onClick}>Click me</Button>;
 });
 
 const Parent = () => {

@@ -1,6 +1,8 @@
 import Button from '@mui/material/Button';
 const ImportUiMaterial = ()  => {
-    return <Button>UI Material</Button>
+    return <div>
+        <Button variant="outlined">UI Material</Button>
+    </div>
 }
 
 export default ImportUiMaterial;

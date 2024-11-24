@@ -15,7 +15,7 @@ function CounterAndHookUseState() {
     return (
         <div>
             <span>{count}</span>
-            <Button onClick={() => {setCount(prevState => ++prevState)}}>click +1</Button>
+            <Button variant="outlined" onClick={() => {setCount(prevState => ++prevState)}}>click +1</Button>
             <Button onClick={updateCount}>click +2</Button>
         </div>
     );

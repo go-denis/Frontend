@@ -15,7 +15,7 @@ class Counter extends Component {
         return (
             <div>
                 <p>Count: {this.state.count}</p>
-                <Button onClick={this.increment}>Increment</Button>
+                <Button variant="outlined" color="error" onClick={this.increment}>Increment</Button>
             </div>
         );
     }
