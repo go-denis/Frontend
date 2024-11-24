@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import React from "react";
 import Message from "./components/Message";
 import CommentsList from "./components/CommentsList";
+import TemperatureConverter from "./components/TemperatureConverter/TemperatureConverter";
+import TodoList from "./components/TodoList/TodoList";
 
 function App() {
   return (
@@ -13,6 +16,10 @@ function App() {
               <h1>Мой список комментариев</h1>
               <CommentsList />
           </div>
+
+          <TemperatureConverter />
+
+          <TodoList />
       </div>
   );
 }
